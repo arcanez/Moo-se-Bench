@@ -6,7 +6,7 @@
 Welcome to the L<Moose>/L<Moo> benchmarks!  If you have any thoughts you'd like to
 share you can open up a
 L<GitHub issue|https://github.com/bluefeet/Moo-se-Bench/issues> or comment on
-the L<blog post|>.
+the L<blog post|http://blog.bluefeet.net/post/124956302724/moose-performance>.
 
 These benchmarks were run on a Mid 2012 MacBook Pro, perlbrew Perl 5.20, Moo
 v2.000001, Moose v2.1405, and Type::Tiny v1.000005, among other specifics.
