@@ -54,7 +54,7 @@ default, the Default benchmarks are using a class with an attribute which does
 have a default, and the NoInit benchmarks are using a class with an attribute
 which has init_arg set to undef.
 
-As we can see Moo kicks Moose's ass in this benchmark, being able to churm out
+As we can see Moo kicks Moose's ass in this benchmark, being able to churn out
 objects many times faster.  In both Moo and Moose's case having an attribute
 with a default dramatically slows them down.
 
