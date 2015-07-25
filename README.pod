@@ -255,5 +255,17 @@ a different performance profile than 5.20 due to the COW changes.
 
 =back
 
+=head1 ACKNOWLEDGEMENTS
+
+Thanks to L<ZipRecruiter|https://www.ziprecruiter.com/>
+for encouraging their employees to contribute back to the open
+source ecosystem.  Without their dedication to quality software
+development this distribution would not exist.
+
+=head1 LICENSE
+
+This document and supporting software is free; you can redistribute
+it and/or modify it under the same terms as Perl itself.
+
 =cut
 
