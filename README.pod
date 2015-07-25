@@ -167,7 +167,7 @@ destroyed.
 Moose blows Moo away when writing to attributes, especially when validation is
 involved.
 
-=head2 Recommendation
+=head2 Recommendations
 
 Remember, these recommendations are about performance.  There are many
 different factors other than performance which you should consider when
@@ -242,6 +242,16 @@ Coercion.
 =item *
 
 Method modifiers.
+
+=item *
+
+Time-squence chart showing performance from version-to-version of the
+libraries, to see if they are getting faster/slower over time.
+
+=item *
+
+Benchmark on different versions of Perl.  For example, 5.22 may have
+a different performance profile than 5.20 due to the COW changes.
 
 =back
 
