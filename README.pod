@@ -67,7 +67,7 @@ In both Moo and Moose there are two ways to set defaults 1) via the C<default>
 attribute argument, and 2) via a lazy builder.  Defaults are simple and cannot
 derive a value from the object that is using it.  Lazy builders on the other
 hand have a lot more flexibility and let you delay the logic which defines the
-default until the attribute it actually used.  Here's a comparison of defaults
+default until the attribute is actually used.  Here's a comparison of defaults
 versus lazy builders:
 
                           Rate New_Moose_Default New_Moose_None New_Moose_Lazy New_Moo_Lazy New_Moo_Default New_Moo_None
@@ -245,7 +245,7 @@ Method modifiers.
 
 =item *
 
-Time-squence chart showing performance from version-to-version of the
+Time-sequence chart showing performance from version-to-version of the
 libraries, to see if they are getting faster/slower over time.
 
 =item *
