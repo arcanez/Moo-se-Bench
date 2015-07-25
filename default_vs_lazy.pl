@@ -1,15 +1,40 @@
 #!/usr/bin/env perl
+
+package Moo::None;
+use Moo;
+has value => (is=>'ro', clearer=>1);
+
+package Moose::None;
+use Moose;
+has value => (is=>'ro', clearer=>'clear_value');
+__PACKAGE__->meta->make_immutable;
+
+package Moo::Default;
+use Moo;
+has value => (is=>'ro', clearer=>1, default=>2);
+
+package Moose::Default;
+use Moose;
+has value => (is=>'ro', clearer=>'clear_value', default=>2);
+__PACKAGE__->meta->make_immutable;
+
+package Moo::Lazy;
+use Moo;
+has value => (is=>'lazy', clearer=>1);
+sub _build_value { 2 }
+
+package Moose::Lazy;
+use Moose;
+has value => (is=>'ro', clearer=>'clear_value', lazy=>1, builder=>'_build_value');
+sub _build_value { 2 }
+__PACKAGE__->meta->make_immutable;
+
+package main;
+
 use strict;
 use warnings FATAL => 'all';
 
 use Benchmark qw(:all) ;
-
-{ package Moo::None; use Moo; has value => (is=>'ro', clearer=>1) }
-{ package Moose::None; use Moose; has value => (is=>'ro', clearer=>'clear_value') }
-{ package Moo::Default; use Moo; has value => (is=>'ro', clearer=>1, default=>2) }
-{ package Moose::Default; use Moose; has value => (is=>'ro', clearer=>'clear_value', default=>2) }
-{ package Moo::Lazy; use Moo; has value => (is=>'lazy', clearer=>1); sub _build_value { 2 } }
-{ package Moose::Lazy; use Moose; has value => (is=>'ro', clearer=>'clear_value', lazy=>1, builder=>'_build_value'); sub _build_value { 2 } }
 
 my $existing_moo_none      = Moo::None->new();
 my $existing_moose_none    = Moo::None->new();

@@ -1,47 +1,41 @@
 #!/usr/bin/env perl
+
+package Moo::NoValidation;
+use Moo;
+has value => ( is=>'ro', writer=>'set_value' );
+
+package Moose::NoValidation;
+use Moose;
+has value => ( is=>'ro', writer=>'set_value' );
+__PACKAGE__->meta->make_immutable;
+
+package Moose::CoreValidation;
+use Moose;
+has value => ( is=>'ro', isa=>'Str', writer=>'set_value' );
+__PACKAGE__->meta->make_immutable;
+
+package Moo::TypeTiny;
+use Types::Standard -types;
+use Moo;
+has value => ( is=>'ro', isa=>Str, writer=>'set_value' );
+
+package Moose::TypeTiny;
+use Types::Standard -types;
+use Moose;
+has value => ( is=>'ro', isa=>Str, writer=>'set_value' );
+__PACKAGE__->meta->make_immutable;
+
+package Moo::MooseLike;
+use MooX::Types::MooseLike::Base qw(:all);
+use Moo;
+has value => ( is=>'ro', isa=>Str, writer=>'set_value' );
+
+package main;
+
 use strict;
 use warnings FATAL => 'all';
 
 use Benchmark qw(:all) ;
-
-{
-    package Moo::NoValidation;
-    use Moo;
-    has value => ( is=>'ro', writer=>'set_value' );
-}
-
-{
-    package Moose::NoValidation;
-    use Moose;
-    has value => ( is=>'ro', writer=>'set_value' );
-}
-
-{
-    package Moose::CoreValidation;
-    use Moose;
-    has value => ( is=>'ro', isa=>'Str', writer=>'set_value' );
-}
-
-{
-    package Moo::TypeTiny;
-    use Types::Standard -types;
-    use Moo;
-    has value => ( is=>'ro', isa=>Str, writer=>'set_value' );
-}
-
-{
-    package Moose::TypeTiny;
-    use Types::Standard -types;
-    use Moose;
-    has value => ( is=>'ro', isa=>Str, writer=>'set_value' );
-}
-
-{
-    package Moo::MooseLike;
-    use MooX::Types::MooseLike::Base qw(:all);
-    use Moo;
-    has value => ( is=>'ro', isa=>Str, writer=>'set_value' );
-}
 
 my $moo_no_validation = Moo::NoValidation->new();
 my $moose_no_validation = Moose::NoValidation->new();
