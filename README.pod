@@ -79,7 +79,7 @@ versus lazy builders:
     New_Moo_None      476190/s             2743%          2309%          2258%          39%             29%           --
 
 The above benchmark creates a new object and retrieves the value from the
-object.  So the measurement here is a padded with the time it takes to
+object.  So the measurement here are inflated by the time it takes to
 instantiate an object, so take it with a grain of salt.
 
 This one is a bit more interesting:
