@@ -52,7 +52,7 @@ cmpthese(500_000, {
     New_Moose_Lazy    => sub{ Moose::Lazy->new->value() },
 });
 
-cmpthese(5_000_000, {
+cmpthese(10_000_000, {
     Existing_Moo_None      => sub{ $existing_moo_none->value() },
     Existing_Moose_None    => sub{ $existing_moose_none->value() },
     Existing_Moo_Default   => sub{ $existing_moo_default->value() },

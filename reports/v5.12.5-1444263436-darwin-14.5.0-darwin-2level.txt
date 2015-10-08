@@ -1,0 +1,45 @@
+        Rate Moose   Moo  Perl
+Moose 5.91/s    --  -91%  -99%
+Moo   64.6/s  994%    --  -88%
+Perl   532/s 8904%  723%    --
+        Rate Moose   Moo
+Moose 5.91/s    --  -85%
+Moo   38.8/s  556%    --
+                  Rate Moose_Default Moose_NoInit Moose_Basic Moo_Default Moo_Basic Moo_NoInit
+Moose_Default 323625/s            --         -30%        -31%        -31%      -46%       -58%
+Moose_NoInit  462963/s           43%           --         -1%         -1%      -23%       -40%
+Moose_Basic   467290/s           44%           1%          --         -0%      -22%       -40%
+Moo_Default   467290/s           44%           1%          0%          --      -22%       -40%
+Moo_Basic     598802/s           85%          29%         28%         28%        --       -23%
+Moo_NoInit    775194/s          140%          67%         66%         66%       29%         --
+                          Rate Moo_MooseLike Moo_TypeTiny Moose_CoreValidation Moose_TypeTiny Moose_NoValidation Moo_NoValidation
+Moo_MooseLike         290698/s            --         -20%                 -85%           -86%               -91%             -91%
+Moo_TypeTiny          361664/s           24%           --                 -81%           -83%               -89%             -89%
+Moose_CoreValidation 1886792/s          549%         422%                   --            -9%               -44%             -44%
+Moose_TypeTiny       2083333/s          617%         476%                  10%             --               -39%             -39%
+Moose_NoValidation   3389831/s         1066%         837%                  80%            63%                 --              -0%
+Moo_NoValidation     3389831/s         1066%         837%                  80%            63%                 0%               --
+           Rate Moose   Moo
+Moose 3134796/s    --   -3%
+Moo   3225806/s    3%    --
+                      Rate New_Moose_Lazy New_Moose_Default New_Moose_None New_Moo_Default New_Moo_Lazy New_Moo_None
+New_Moose_Lazy    229358/s             --              -17%           -36%            -40%         -40%         -57%
+New_Moose_Default 277778/s            21%                --           -23%            -27%         -28%         -48%
+New_Moose_None    359712/s            57%               29%             --             -6%          -6%         -32%
+New_Moo_Default   381679/s            66%               37%             6%              --          -1%         -28%
+New_Moo_Lazy      384615/s            68%               38%             7%              1%           --         -28%
+New_Moo_None      531915/s           132%               91%            48%             39%          38%           --
+                            Rate Existing_Moo_Lazy Existing_Moose_Lazy Existing_Moose_Default Existing_Moo_Default Existing_Moose_None Existing_Moo_None
+Existing_Moo_Lazy      2439024/s                --                 -3%                   -28%                 -31%                -31%              -35%
+Existing_Moose_Lazy    2525253/s                4%                  --                   -26%                 -28%                -29%              -32%
+Existing_Moose_Default 3401361/s               39%                 35%                     --                  -3%                 -4%               -9%
+Existing_Moo_Default   3521127/s               44%                 39%                     4%                   --                 -1%               -6%
+Existing_Moose_None    3546099/s               45%                 40%                     4%                   1%                  --               -5%
+Existing_Moo_None      3731343/s               53%                 48%                    10%                   6%                  5%                --
+                         Rate Clear_Moose_Lazy Clear_Moo_Lazy Clear_Moo_Default Clear_Moose_Default Clear_Moose_None Clear_Moo_None
+Clear_Moose_Lazy     992063/s               --            -2%              -43%                -45%             -47%           -48%
+Clear_Moo_Lazy      1008065/s               2%             --              -42%                -45%             -46%           -47%
+Clear_Moo_Default   1748252/s              76%            73%                --                 -4%              -6%            -9%
+Clear_Moose_Default 1818182/s              83%            80%                4%                  --              -2%            -5%
+Clear_Moose_None    1858736/s              87%            84%                6%                  2%               --            -3%
+Clear_Moo_None      1915709/s              93%            90%               10%                  5%               3%             --

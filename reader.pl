@@ -19,7 +19,7 @@ use Benchmark qw(:all) ;
 my $moo = Moo::Reader->new( value=>3 );
 my $moose = Moose::Reader->new( value=>3 );
 
-cmpthese(2_000_000, {
+cmpthese(10_000_000, {
     Moo   => sub{ $moo->value() },
     Moose => sub{ $moose->value() },
 });

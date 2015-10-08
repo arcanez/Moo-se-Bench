@@ -4,7 +4,7 @@ use warnings FATAL => 'all';
 
 use Benchmark qw(:all) ;
 
-cmpthese(100, {
+cmpthese(500, {
     Perl  => sub { system('perl', '-e', '') },
     Moo   => sub { system('perl', '-e', 'use Moo') },
     Moose => sub { system('perl', '-e', 'use Moose') },
