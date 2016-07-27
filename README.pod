@@ -205,7 +205,7 @@ If you are doing a lot of validation Moose may be a better choice.
 =item *
 
 Use L<Type::Tiny> for your validation, whether you are using Moo or Moose.
-Conversely, don't use L<Moox::Types::MooseLike> (and most likely the
+Conversely, don't use L<MooX::Types::MooseLike> (and most likely the
 rest of the C<MooX::Types::> modules) as it is a hog in comparison to
 Type::Tiny.
 
