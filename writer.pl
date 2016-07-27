@@ -30,6 +30,12 @@ use MooX::Types::MooseLike::Base qw(:all);
 use Moo;
 has value => ( is=>'ro', isa=>Str, writer=>'set_value' );
 
+package Moo::MooXTypeTiny;
+use Moo;
+use MooX::TypeTiny;
+use Types::Standard -types;
+has value => ( is=>'ro', isa=>Str, writer=>'set_value' );
+
 package main;
 
 use strict;
@@ -43,6 +49,7 @@ my $moose_core_validation = Moose::CoreValidation->new();
 my $moo_type_tiny = Moo::TypeTiny->new();
 my $moose_type_tiny = Moose::TypeTiny->new();
 my $moo_moose_like = Moo::MooseLike->new();
+my $moo_moox_type_tiny = Moo::MooXTypeTiny->new();
 
 cmpthese(2_000_000, {
     Moo_NoValidation     => sub{ $moo_no_validation->set_value('i_am_s_string') },
@@ -51,4 +58,5 @@ cmpthese(2_000_000, {
     Moo_TypeTiny         => sub{ $moo_type_tiny->set_value('i_am_s_string') },
     Moose_TypeTiny       => sub{ $moose_type_tiny->set_value('i_am_s_string') },
     Moo_MooseLike        => sub{ $moo_moose_like->set_value('i_am_s_string') },
+    Moo_MooX_TypeTiny    => sub{ $moo_moox_type_tiny->set_value('i_am_s_string') },
 });
